@@ -28,7 +28,6 @@ data class TicTacToe(
     val nextPlayer: Player = Player.X,
     val previousBoard: TicTacToe? = null,
 ) {
-
     private fun checkAlignment(alignment: List<Int>): Player? {
         val first = board[alignment[0]]
         return if (first != null &&
@@ -41,5 +40,4 @@ data class TicTacToe(
 
     val winner: Player? = alignmentsToCheck
         .firstNotNullOfOrNull { checkAlignment(it) }
-
 }
